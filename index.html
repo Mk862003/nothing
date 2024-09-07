@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Resume Builder Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Resume Builder</h1>
+
+        <!-- Form for Resume -->
+        <form id="resume-form">
+            <!-- Personal Information Section -->
+            <section id="personal-info-section">
+                <h2>Personal Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="profile-picture">Profile Picture URL:</label>
+                <input type="url" id="profile-picture" name="profile-picture" placeholder="Enter image URL" required>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education-section">
+                <h2>Education</h2>
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" placeholder="Enter your education details" required></textarea>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section id="work-experience-section">
+                <h2>Work Experience</h2>
+                <label for="work-experience">Work Experience:</label>
+                <textarea id="work-experience" name="work-experience" placeholder="Enter your work experience" required></textarea>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills-section">
+                <h2>Skills</h2>
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills" placeholder="List your skills" required></textarea>
+            </section>
+
+            <!-- Toggle Buttons for Section Visibility -->
+            <div class="buttons">
+                <button id="toggle-skills-btn" type="button">Toggle Skills Section</button>
+                <button id="toggle-education-btn" type="button">Toggle Education Section</button>
+                <button id="toggle-work-experience-btn" type="button">Toggle Work Experience Section</button>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <!-- Display Resume Section -->
+        <section id="resume-display" style="display: none;">
+            <h2>Your Resume</h2>
+            <div id="display-personal-info"></div>
+            <div id="display-education"></div>
+            <div id="display-work-experience"></div>
+            <div id="display-skills"></div>
+        </section>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
